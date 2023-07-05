@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
   <title>Age Calculator</title>
@@ -19,5 +19,59 @@
   </form>
   <div id="result"></div>
   <script src="script.js"></script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .sidebar {
+      width: 200px;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background-color: #555;
+      color: white;
+    }
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="content">
+    <div class="container text-center">
+      <a href="about.html" style="text-decoration: none;"><h1 class="bg-dark py-4 text-info">
+        <i class="fa-solid fa-school"></i>AGE CALCULATOR
+      </h1></a>
+    </div>
+    <form id="ageForm">
+      <label for="birthdate">Enter your birthdate:</label>
+      <input type="date" id="birthdate" required>
+      <br>
+      <br>
+      <button type="submit">Calculate Age</button>
+    </form>
+    <div id="result"></div>
+    <script src="script.js"></script>
+  </div>
 </body>
 </html>
