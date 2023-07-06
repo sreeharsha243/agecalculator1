@@ -1,77 +1,71 @@
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <title>Age Calculator</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-  <div class="container text-center">
-    <a href="about.html" style="text-decoration: none;"><h1 class="bg-dark py-4 text-info">
-      <i class="fa-solid fa-school"></i>AGE CALCULATOR
-    </h1></a>
-  </div>
-  <form id="ageForm">
-    <label for="birthdate">Enter your birthdate:</label>
-    <input type="date" id="birthdate" required>
-    <br>
-    <br>
-    <button type="submit">Calculate Age</button>
-  </form>
-  <div id="result"></div>
-  <script src="script.js"></script>
-</body>
-</html>-->
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Age Calculator</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="age.css">
   <style>
-    .sidebar {
-      width: 200px;
-      background-color: #f1f1f1;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    .sidebar a {
-      display: block;
-      color: black;
-      padding: 16px;
-      text-decoration: none;
-    }
-    .sidebar a:hover {
-      background-color: #555;
-      color: white;
-    }
-    .content {
-      margin-left: 200px;
+
+    header {
+      background-color: #c38c26;
       padding: 20px;
+      color: #fff;
+      text-align: center;
     }
+
+    button:hover {
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad,0 0 25px
+    #ff96ad,0 0 50px #ff96ad,0 0 200px #ff96ad;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: block;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #da10b2;
+      color: #fff;
+    }
+
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="content">
-    <div class="container text-center">
-      <a href="about.html" style="text-decoration: none;"><h1 class="bg-dark py-4 text-info">
-        <i class="fa-solid fa-school"></i>AGE CALCULATOR
-      </h1></a>
-    </div>
-    <form id="ageForm">
-      <label for="birthdate">Enter your birthdate:</label>
-      <input type="date" id="birthdate" required>
-      <br>
-      <br>
-      <button type="submit">Calculate Age</button>
-    </form>
-    <div id="result"></div>
-    <script src="script.js"></script>
-  </div>
+  <header>
+    <h1 style="color: #fff; font-size: 24px;">Welcome to our website!</h1>
+  </header>
+  <br>
+  <br>
+  <nav>
+    <ul>
+    <h2>Click On the button to redirect</h2><br><br><br>
+  
+      <li><a href="project/web_project.html">WEB PROJECTS</a></li><br><br>
+      <li><a href="index1.html">AGE CALCULATOR</a></li><br><br>
+      <li><a href="about.html">About Us</a></li><br><br>
+      <li><a href="contact_us.html">Contact Us</a></li><br><br><br>
+    </ul>
+  </nav>
+  
 </body>
 </html>

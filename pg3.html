@@ -1,0 +1,38 @@
+<html>
+<head lang="en">
+<title>Text Grow and Shrink</title>
+</head>
+<body>
+<div style="margin-top: 200px;" align="center">
+<p style="font-size: 5px; color: red;"></p>
+</div>
+<script>
+var text = document.querySelector('p');
+var font = 5;
+var flag = 0;
+/* The setInterval() method calls a function or evaluates an expression at specified intervals (in
+milliseconds) */
+setInterval(function(){if(flag==1){dec();}if(flag==0){inc();}}, 100);
+//User defined function to increment value of font and setting new value to text font
+function inc()
+{
+font++;
+text.style.fontSize = font;
+text.style.color = "red";
+text.textContent="TEXT-GROWING";
+if(font==50)
+{ flag=1; }
+}
+//User defined function to decrement value of font and setting new value to text font
+function dec()
+{
+font--;
+text.style.fontSize = font;
+text.style.color = "blue";
+text.textContent="TEXT-SHRINKING";
+if(font==5)
+{ flag=0; }
+}
+</script>
+</body>
+</html>

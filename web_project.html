@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programs Website</title>
+  <style>
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+
+    #sidebar {
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    #main {
+      flex: 1;
+      padding: 20px;
+    }
+    
+    .links {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      color: blue;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      width: 250px;
+    }
+
+    .links.hover {
+      background-color: #e0e0e0;
+    }
+
+    .program-link {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .program-link:hover {
+      background-color: #e0e0e0;
+    }
+
+    .program-content {
+      display: none;
+      margin-bottom: 20px;
+    }
+
+    .program-content.active {
+      display: block;
+    }
+    .calculator {
+      width: 301px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f5f5f5;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      font-family: Arial, sans-serif;
+  }
+
+  .display {
+      width: 95.1%;
+      height: 50px;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 20px;
+      text-align: right;
+  }
+
+  .row {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .button {
+      width: 70px;
+      height: 40px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      border: none;
+      border-radius: 5px;
+  }
+
+  .button:hover {
+      background-color: #d0d0d0;
+  }
+
+  .button.operator {
+      background-color: #ff9800;
+      color: white;
+  }
+
+  .button.operator:hover {
+      background-color: #f57c00;
+  }
+  </style>
+  <script>
+    function showprogramContent(programId) {
+      var programContents = document.getElementsByClassName("program-content");
+      for (var i = 0; i < programContents.length; i++) {
+        programContents[i].classList.remove("active");
+      }
+      var selectedprogram = document.getElementById(programId);
+      selectedprogram.classList.add("active");
+    }
+  </script>
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Web Programs</h2>
+    <a href="#" class="program-link" onclick="showprogramContent('program1')">Program 1</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program2')">Program 2</a>
+    <a href="pg3.html" class="program-link" onclick="">Program 3</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program4')">Program 4</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program5')">Program 5</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program6')">Program 6</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program7')">Program 7</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program8')">Program 8</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program9')">Program 9</a>
+    <a href="#" class="program-link" onclick="showprogramContent('program10')">Program 10</a>
+    <a href="../index.html" class="program-link">Home</a>
+  </div>
+
+  <div id="main">
+    <div id="program1" class="program-content">
+      <h2>Program 1</h2>
+      <center>
+      <h3>Java Script Simple Calculator</h3>
+      <title>Virtual Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" readonly>
+        <div class="row">
+            <button class="button" onclick="appendToDisplay('7')">7</button>
+            <button class="button" onclick="appendToDisplay('8')">8</button>
+            <button class="button" onclick="appendToDisplay('9')">9</button>
+            <button class="button operator" onclick="appendToDisplay('/')">/</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="appendToDisplay('4')">4</button>
+            <button class="button" onclick="appendToDisplay('5')">5</button>
+            <button class="button" onclick="appendToDisplay('6')">6</button>
+            <button class="button operator" onclick="appendToDisplay('*')">*</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="appendToDisplay('1')">1</button>
+            <button class="button" onclick="appendToDisplay('2')">2</button>
+            <button class="button" onclick="appendToDisplay('3')">3</button>
+            <button class="button operator" onclick="appendToDisplay('-')">-</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="appendToDisplay('0')">0</button>
+            <button class="button" onclick="appendToDisplay('.')">.</button>
+            <button class="button operator" onclick="calculate()">=</button>
+            <button class="button operator" onclick="appendToDisplay('+')">+</button>
+        </div>
+        <div class="row">
+            <button class="button operator" onclick="clearDisplay()">C</button>
+            <button class="button operator" onclick="backspace()">&larr;</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToDisplay(value) {
+            document.getElementById("display").value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+        }
+
+        function backspace() {
+            var display = document.getElementById("display");
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calculate() {
+            var expression = document.getElementById("display").value;
+            var result = eval(expression);
+            document.getElementById("display").value = result;
+        }
+    </script>
+    </center>
+    </div>
+
+    <div id="program2" class="program-content">
+      <h2>Program 2</h2>
+      <title>Compute Square and Cube</title>
+      <body>
+      <center><h1>Squares and Cubes</h1>
+      <script type="text/javascript">
+      // Java script code to compute square and cube from 0 to 10 and print in table format
+      document.write('<table border="1"><tr><th>Number</th><th>Square</th><th>Cube</th></tr>');
+      var num;
+      for(num=0;num<=10;num++)
+      { 
+        document.write('<tr><td>'+num+'</td><td>'+num*num+'</td><td>'+num*num*num+'</td></tr>');
+      }
+      document.write("</table>");
+      </script>
+      </center>
+      </body>
+    </div>
+
+    <div id="program3" class="program-content">
+      <h2>Program 3</h2>
+      <title>Text Grow and Shrink</title>
+      <body>
+      <div style="margin-top: 200px;" align="center">
+      <p style="font-size: 5px; color: red;"></p>
+      </div>
+      <script>
+      var text = document.querySelector('p');
+      var font = 5;
+      var flag = 0;
+      /* The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds) */
+      setInterval(function(){if(flag==1){dec();}if(flag==0){inc();}}, 1000);
+      //User defined function to increment value of font and setting new value to text font
+      function inc()
+      {
+        font++;
+        text.style.fontSize = font;
+        text.style.color = "red";
+        text.textContent="TEXT-GROWING";
+        if(font==50)
+        { flag=1; }
+      }
+      //User defined function to decrement value of font and setting new value to text font
+      function dec()
+      {
+        font--;
+        text.style.fontSize = font;
+        text.style.color = "blue";
+        text.textContent="TEXT-SHRINKING";
+        if(font==5)
+        { flag=0; }
+      }
+      </script>
+    </body>
+    </div>
+
+    <div id="program4" class="program-content">
+      <h2>Program 4</h2>
+      <h1>Leftmost Vowel in Word</h1>
+      <p>
+        This program demonstrates the structure of HTML5 files and semantic structure followed. Writing of
+        functions in Java script and form based event handling in Java script is also illustrated. The dynamic
+        processing of Java script without reloading HTML5 pages is also shown.
+      </p>
+      <body>
+      <center>
+      <input type="text" id="t" />
+      <button onclick="f()">Submit</button>
+      <p></p>
+      <script>
+      //User defined function to check vowel and reverse the number
+      function f()
+      {
+        var str = document.getElementById("t").value;
+        var num = parseInt(str);
+        if(num)
+        {
+          // document.querySelector('p').textContent = '';
+          alert("The reverse of given number is : "+num.toString().split('').reverse().join(''));
+        }
+        else
+        {
+          str = str.toLowerCase();
+          var arr = str.split('');
+          for(var i=0; i<arr.length; i++)
+          {
+            if(arr[i]=='a' || arr[i]=='e' || arr[i]=='i' || arr[i]=='o' || arr[i]=='u')
+            {
+              i++;
+              alert('The Input string is: ' +str+ ', The Leftmost vowel is: ' +arr[i-1]+ ', The Position is: ' +i);
+              break;
+            }
+          }
+        }
+      }
+      </script>
+      </center>
+      </body>
+    </div>
+
+    <div id="program5" class="program-content">
+      <h2>Program 5</h2>
+      <p>eXtensible Markup Language (XML) is used in many aspects of web development. It is often used to
+        separate data from presentation. XML does not carry any information about how to be displayed. The
+        same XML data can be used in many different presentation scenarios.Because of this, with XML, there is
+        a full separation between data and presentation. In many HTML applications, XML is used to store or
+        transport data, while HTML is used to format and display the same data.
+      </p>
+      <p>
+        An XML document with correct syntax is called "Well Formed". An XML document validated against a
+        DTD is both "Well Formed" and "Valid". A "Valid" XML document is a "Well Formed" XML document,
+        which also conforms to the rules of a Document Type Definition (DTD). XML files suffer though from
+        poor usability by nature as they are not friendly to look at in the browser. Hence they are rendered
+        either using CSS or XSLT (eXtensible Style Sheet Language Transformation from XML to XHTML). CSS
+        does not support new elements to be added or records to be sorted. XSLT is template based and
+        support manipulating contents of XML as well as ordering of XML elements.
+      </p>
+      <a class="links" href="5.xml">Click Here To View The XML File</a>
+    </div>
+
+    <div id="program6" class="program-content">
+      <h2>Program 6</h2>
+      <p>With server side technologies, server executes the program (PHP) and sends output to browser. This
+        program using PHP gives the most commonly used script in web-site design i.e keeping track of the number
+        of visitors of a web page. File handling capabilities of PHP is also demonstrated.
+      </p>
+      <a class="links" href="6.php">Click Here To View The PHP Page</a>
+
+    </div>
+
+    <div id="program7" class="program-content">
+      <h2>Program 7</h2>
+      <p>This program fetches the current time from the server. The automatic page refreshing ability of PHP
+        programs based on timers is demonstrated. This feature can be exploited in any online exam scenarios which
+        are time bound and server time should be shown continuously.
+      </p>
+      <a class="links" href="7.php">Click Here To View The PHP Page</a>
+
+    </div>
+
+    <div id="program8" class="program-content">
+      <h2>Program 8</h2>
+      <p>This program is used to demonstrate numerical processing abilities of PHP. The use of scalar variables,
+        functions and multi-dimensional arrays is explored in this program.
+      </p>
+      <a class="links" href="8.php">Click Here To View The PHP Page</a>
+
+    </div>
+
+    <div id="program9" class="program-content">
+      <h2>Program 9</h2>
+      <p>Write a PHP program named states.php that declares a variable states with value
+        "Mississippi Alabama Texas Massachusetts Kansas". write a PHP program that does the
+        following:
+        a. Search for a word in variable states that ends in xas. Store this word in element 0 of
+        a list named statesList.
+        b. Search for a word in states that begins with k and ends in s. Perform a
+        caseinsensitive comparison. [Note: Passing re.Ias a second parameter to method
+        compile performs a case-insensitive comparison.] Store this word in element1 of
+        statesList.
+        c. Search for a word in states that begins with M and ends in s. Store this word in
+        element 2 of the list.
+        d. Search for a word in states that ends in a. Store this word in element 3 of the list.
+      </p>
+      <p>
+        Explanation:
+        This program illustrates the regular expression capabilities in PHP. Writing patterns and
+        matching against a given string is provided. Case sensitive and anchor patterns are explored.
+      </p>
+      <a class="links" href="9.php">Click Here To View The PHP Page</a>
+      
+    </div>
+
+    <div id="program10" class="program-content">
+      <h2>Program 10</h2>
+      <h3>Write a PHP program to sort the student records which are stored in the database using selection sort.</h3>
+      <p>
+        Program brings out the use of PHP in developing dynamic web pages. The web-application required
+        follows 3-tier architecture as shown in the figure below. Three tiers include Presentation logic (HTML with
+        CSS), Business logic (PHP) and Data access (MySQL). The choice of MySQL is because its open source, light
+        weight and platform independent.
+      </p>
+      <a class="links" href="10.html">Click Here To View The PHP Page</a>      
+    </div>
+  </div>
+</body>
+</html>

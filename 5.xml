@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+      <!DOCTYPE student[
+        <!ELEMENT student_information (ad+)>
+        <!ELEMENT ad (usn,name,collegename,branch,year,email)>
+        <!ELEMENT usn (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT collegename (#PCDATA)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT lable (#PCDATA|email|year|branch|college|name|usn)*>
+        <!ELEMENT h3 (#PCDATA)>
+        <!ELEMENT h2 (#PCDATA)>
+        ]>
+        <?xml-stylesheet type="text/css" href="css/5.css"?>
+        <student_information>
+        <h3>student-information</h3>
+        <h2>student 1</h2>
+        <ad><label>usn:<usn>4jn22is099</usn></label></ad>
+        <ad><label>name:<name>aaa</name></label></ad>
+        <ad><label>collegename:<college>jnnce</college></label></ad>
+        <ad><label>branch:<branch>ise</branch></label></ad>
+        <ad><label>year of joining:<year>2022</year></label></ad>
+        <ad><label>email id:<email>aaa@gmail.com</email></label></ad>
+        <h2>student 2</h2>
+        <ad><label>usn:<usn>4jn22is093</usn></label></ad>
+        <ad><label>name:<name>bbb</name></label></ad>
+        <ad><label>collegename:<college>jnnce</college></label></ad>
+        <ad><label>branch:<branch>ise</branch></label></ad>
+        <ad><label>year of joining:<year>2022</year></label></ad>
+        <ad><label>email id:<email>bbb@gmail.com</email></label></ad>
+        <h2>student 3</h2>
+        <ad><label>usn:<usn>4jn22is083</usn></label></ad>
+        <ad><label>name:<name>bbb</name></label></ad>
+        <ad><label>collegename:<college>jnnce</college></label></ad>
+        <ad><label>branch:<branch>ise</branch></label></ad>
+        <ad><label>year of joining:<year>2022</year></label></ad>
+        <ad><label>email id:<email>bbb@gmail.com</email></label></ad>
+        </student_information>
